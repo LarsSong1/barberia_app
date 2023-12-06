@@ -142,7 +142,7 @@ STATIC_URL = '/static/'
 
 if not DEBUG:
     # Set the STATIC_ROOT for production
-    STATIC_ROOT = '/opt/render/project/src/staticfiles'
+    STATIC_ROOT = 'os.path.join(BASE_DIR, 'staticfiles')'
 
     # Use WhiteNoise for serving static files in production
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
