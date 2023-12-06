@@ -1,0 +1,17 @@
+asgiref==3.7.2
+backports.zoneinfo==0.2.1
+crispy-tailwind==0.5.0
+Django==4.2.7
+django-appconf==1.0.6
+django-compressor==4.4
+django-crispy-forms==2.1
+django-tabbed-admin==1.0.4
+django-tailwind==3.6.0
+Pillow==10.1.0
+rcssmin==1.1.1
+rjsmin==1.2.1
+sqlparse==0.4.4
+tailwind==3.1.5b0
+tailwindcss==0.0.1
+typing-extensions==4.8.0
+tzdata==2023.3
