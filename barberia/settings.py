@@ -89,10 +89,6 @@ WSGI_APPLICATION = 'barberia.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': dj_database_url.config(),
 }
 
@@ -135,10 +131,17 @@ STATIC_URL = '/static/'
 
 
 
-if not DEBUG:
+# if not DEBUG:
 
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+if not DEBUG:
+    # Set the STATIC_ROOT for production
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+    # Use WhiteNoise for serving static files in production
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
